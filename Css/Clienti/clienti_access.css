@@ -1,0 +1,388 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    font-family: "Montserrat", sans-serif;
+}
+.container{
+    display:grid;
+    grid-template-areas:
+    "head head"
+    "bod bod"
+    "foot foot";
+    /*min-height:100vh;
+    width:auto;
+    grid-template-rows: 7em 1fr 3.7em;*/
+}
+.header{
+    grid-area:head;
+
+    display: flex;
+    align-items: center;
+    padding:0 1em;
+    background-color: rgb(179,179,177);
+    overflow: hidden;
+}
+.header a{
+    color:black;
+    text-align:center;
+    text-decoration: none;
+    font-weight: 1000;
+    font-size:1.2rem;
+    padding:0.5em 1em;
+}
+.header >a:hover{
+color:#ddd;
+}
+.header #contact{
+  padding-right:5em;
+}
+.dropdown {
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    font-size: 1.2rem;  
+    font-family: inherit;  
+    font-weight:1000;
+    border: none;
+    outline: none;
+    color: black;
+    background-color: inherit;
+    padding: 0.5em 1em;
+    margin: 0;
+  }
+  .dropdown .dropbtn:hover{
+    color:#ddd;
+    cursor:pointer;
+  }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color:rgb(179,179,177);
+    border-radius: 1rem;
+    min-width: 6em;
+    box-shadow: 0px 8px 16px 0px rgba(243, 239, 239, 0.2);
+  }
+.dropdown-content a {
+    display: block;
+
+    text-align: left;
+    padding: 0.5em 0.8em 0.8em 0.8em;
+    color:white;
+  }
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 0.5em;
+  }
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+#logodiv{
+    display:flex;
+    flex:1;
+    justify-content: flex-start;
+    padding:1em 1em 1em 2em;
+ }
+ #logodiv a{
+  padding:0;
+  max-height:80px;
+}
+#logodiv img{
+    border-radius:50%;
+  }
+#logodiv img:hover{
+    transform: scale(1.3);
+    z-index: 1;
+  }
+.icon{
+    display:none;
+    font-size:1em;
+  }
+
+
+.bod{
+    grid-area:bod;
+    display: grid;
+    gap:15px;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgb(196, 196, 196) ,rgb(43, 49, 46));
+    background-size: cover;
+    min-height:calc(100vh - 170px);
+}
+.bod p{
+  display:none;
+  font-weight: 1000;
+  font-size: 2em;
+  padding:30px;
+}
+.bod p span{
+  color:red
+}
+.imgdiv{
+    display: flex;
+    justify-content: center;
+    padding:20px;
+}
+.imgdiv img{
+    max-width:100%;
+    max-height: 600px;
+    border-radius: 10px;
+}
+
+
+
+footer{
+    grid-area:foot;
+
+    position:sticky;
+    bottom:0;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(179,179,177) ;
+}
+footer a{
+  padding:1em;
+  text-decoration: none;
+  color:black;
+}
+footer a:visited{
+  color:black;
+}
+footer a:hover{
+  color:#ddd;
+}
+footer .tiktok{
+  padding-right:3em;
+}
+footer .telnum, footer .email{
+  color:black;
+  font-weight: 900;
+  font-size:0.6rem;
+  padding:0.2em 3em 0.2em 1em;
+}
+footer .telnum:hover{
+  color:#ddd;
+  cursor: pointer;
+}
+footer .email:hover{
+  color:#ddd;
+  cursor: pointer;
+}
+.footertext{
+  flex:1;
+  padding:0.2em 1em 0.2em 3em;
+}
+.footertext p{
+  color:black;
+  font-weight: 900;
+}
+
+
+/*Media Queries*/
+
+@media screen and (max-width:475px) {
+   .container{
+    grid-template-areas:
+    "head"
+    "bod"
+    "foot";
+    max-width: 475px;
+    justify-content: center;
+    grid-template-columns:1fr ;
+   }
+   header{
+    flex-direction: column;
+    justify-content: center;
+   }
+   .header a {
+    font-size:0.7em;
+    padding:0.5em;
+   }
+   .header #contact{
+    padding-right:0.5em;
+  }
+   .header a:not(:first-child), .dropdown .dropbtn {
+    display:none;
+  }
+  #header a.icon {
+   display: flex;
+  /* position: absolute;
+   right:3em;
+   top:3em;*/
+  }
+  .header.responsive .dropdown .dropbtn{
+    display: block;
+  }
+  .header.responsive a{
+    display: block;
+  }
+   .dropdown-content {
+    min-width:4em;
+   }
+   .dropdown-content a {
+    text-align: center;
+   }
+   .dropdown .dropbtn {
+    font-size: 0.7em; 
+  }
+    #logodiv{
+    padding:0.5em;
+    /*position: absolute;
+    left:3em;*/
+  }
+
+  .bod{
+    grid-template-columns: 1fr;
+  }
+  .imgdiv img{
+    max-height: 500px;
+}
+
+  footer a{
+    padding:0.5em;
+    font-size:0.5em;
+  }
+.footertext p{
+  font-size:0.5rem;
+  }
+.footertext{
+  padding:0.2em 1em 0.2em 1em;
+}
+.telnum{
+  padding-right:0.7em;
+  padding-left:0.5em;
+}
+.email{
+  padding-right:0;
+  padding-left:0;
+}
+footer .telnum, footer .email{
+  font-size:0.4rem;
+  padding-left: 0.5em;
+  padding-right: 0.7em;
+}
+footer .tiktok{
+  padding-right:1em;
+}
+}
+
+
+@media screen and (min-width:475px) and (max-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+  .header a{
+    font-size:0.68em;
+  }
+  .header #contact{
+    padding:0.5em 1em;
+  }
+  .dropdown .dropbtn {
+    font-size: 0.68rem;
+  }  
+  .dropdown-content {
+    min-width:4em;
+   }
+
+
+   .bod{
+    grid-template-columns: 1fr;
+  }
+
+
+   .footertext p{
+    font-size:0.5rem;
+    }
+    footer a{
+      padding:0.5em;
+      font-size:0.5em;
+    }
+    footer .telnum, footer .email{
+      font-size:0.4rem;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width:768px){
+  .header a{
+    font-size:0.9em;
+  }
+  .dropdown .dropbtn {
+    font-size: 0.9rem;
+  }  
+  .dropdown-content {
+    min-width:4em;
+   }
+   .header #contact{
+    padding:0.5em 1em;
+  }
+
+
+  .bod{
+    grid-template-columns: 1fr;
+  }
+
+  
+  .footertext p{
+    font-size:0.7rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px){
+  .header #contact{
+    padding:0.5em 1em;
+  }
+
+  .bod{
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    grid-template-areas:
+    "div1 div2"
+    "div3 div3" ;
+  }
+  #img1div{
+    grid-area: div1;
+  }
+  #img2div{
+    grid-area:div2;
+  }
+  #img3div{
+    grid-area:div3;
+  }
+  #img3div img{
+    max-width:100%;
+    max-height: 500px;
+  }
+
+
+}
+
+@media screen and (min-width: 1024px) and (max-width:1280px){
+  .imgdiv img{
+    max-height: 450px;
+}
+}
+
+
+@media screen and (min-width: 1280px){
+  .header a{
+    font-size:1.5em;
+  }
+  .dropdown .dropbtn {
+    font-size: 1.5rem;
+  }  
+}
+
+/*@media screen and (min-width:1536px){
+  .header a{
+    font-size:2em;
+  }
+  .dropdown .dropbtn {
+    font-size: 2rem;
+  }  
+}*/

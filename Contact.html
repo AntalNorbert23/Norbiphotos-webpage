@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="Css/contact.css"/>
+    
+    <title>Norbiphotos</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+        <header class="header" id="header">
+            <div id="logodiv"><a href="Acasa.html"><img src="norbiphotoslogo.jpg" alt="norbiphotos logo"></a></div>
+            <a href="Acasa.html">Acasă</a>
+            <div class="dropdown">
+              <button class="dropbtn">
+                Portfolio 
+              </button>
+                <div class="dropdown-content">
+                    <a href="Clienti.html">Acces clienți</a>
+                    <a href="Portrete.html">Portrete</a>
+                    <a href="Drona.html">Dronă</a>
+                    <a href="Culinar.html">Culinar</a>
+                    <a href="Evenimente.html">Evenimente</a>
+                </div>
+            </div>
+            <a href="Despremine.html">Despre mine</a>
+            <a href="Servicii.html">Servicii</a>
+            <a href="Contact.html" id="contact">Contact</a>
+            <div id="icon"><a class="icon" onclick="myFunction()">&#9776;</a></div>
+        </header>
+        <section class="bod">
+            <h1>Completează formularul de mai jos pentru a-mi trimite un e-mail:</h1>
+            <section class="form">
+                <form action="send_email.php" method="post">
+                    <label for="lname">Numele de familie:</label>
+                    <input type="text" id="nume" name="lname" required placeholder="Introdu numele de familie"><span id="eroare_nume"></span>
+                    <label for="fname" class="fname">Prenume:</label>
+                    <input type="text" id="prenume" name="fname" required placeholder="Introdu prenumele"><span id="eroare_prenume"></span>
+                    <label for="email" class="email">Adresa email:</label>
+                    <input type="email" id="email" name="email" required placeholder="someone@yahoo.com"/><span id="eroare_email"></span>
+                    <label for="mesaj" class="mesaj">Mesaj:</label>
+                    <textarea rows="5" cols="40" id="message"></textarea>
+                    <input type="submit" name="Trimite" class="submit" id="submit" value="Trimite"/>
+                </form>
+            </section>
+        </section>
+        <footer>
+          <div class="footertext"><p>All content copyright</p></div>
+          <p class="email">anorbertcsaba@yahoo.com</p>
+          <p class="telnum">+0757542843</p>
+          <a href="https://www.facebook.com/norbiphotos7" target="_blank" class="fab fa-facebook-f" id="facebook"></a> 
+          <a href="https://www.instagram.com/norbertcsaba.7/" target="_blank" class="fab fa-instagram" id="instagram"></a>
+          <a href="https://www.tiktok.com/@norbiphotos" target="_blank" class="fab fa-tiktok tiktok"></a>
+        </footer>
+      </div>
+    <script src="norbiphotos.js"></script>
+    <script src="Javascript/contact.js"></script>
+  </body>
+</html>

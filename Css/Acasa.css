@@ -1,0 +1,522 @@
+/* line 3, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 6, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* line 12, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.container {
+  display: grid;
+  grid-template-areas: "head head" "bod bod" "foot foot";
+  grid-template-columns: 1fr 1fr;
+}
+
+/* line 20, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.header {
+  grid-area: head;
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  background-color: #b3b3b1;
+  overflow: hidden;
+}
+
+/* line 29, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.header a {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 1000;
+  font-size: 1.2rem;
+  padding: 0.5em 1em;
+}
+
+/* line 37, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.header > a:hover {
+  color: #ddd;
+}
+
+/* line 40, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.header #contact {
+  padding-right: 5em;
+}
+
+/* line 43, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.dropdown {
+  overflow: hidden;
+}
+
+/* line 46, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.dropdown .dropbtn {
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 1000;
+  border: none;
+  outline: none;
+  color: black;
+  background-color: inherit;
+  padding: 0.5em 1em;
+  margin: 0;
+}
+
+/* line 57, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.dropdown .dropbtn:hover {
+  color: #ddd;
+  cursor: pointer;
+}
+
+/* line 61, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #b3b3b1;
+  border-radius: 1rem;
+  min-width: 6em;
+  box-shadow: 0px 8px 16px 0px rgba(243, 239, 239, 0.2);
+}
+
+/* line 70, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.dropdown-content a {
+  display: block;
+  text-align: left;
+  padding: 0.5em 0.8em 0.8em 0.8em;
+  color: white;
+}
+
+/* line 77, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+  border-radius: 0.5em;
+}
+
+/* line 82, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* line 85, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#logodiv {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  padding: 1em 1em 1em 2em;
+}
+
+/* line 91, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#logodiv a {
+  padding: 0;
+  max-height: 80px;
+}
+
+/* line 95, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#logodiv img {
+  border-radius: 50%;
+}
+
+/* line 98, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#logodiv img:hover {
+  transform: scale(1.3);
+  z-index: 1;
+}
+
+/* line 102, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.icon {
+  display: none;
+  font-size: 1em;
+}
+
+/*.bod{
+    grid-area:bod;
+    background-image: url(peisaj.JPG);
+    background-size: cover;
+    height:100vh;
+    opacity:0.8;
+}*/
+/* line 116, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#container2 {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #c4c4c4, #2b312e);
+}
+
+/* line 125, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slideshow {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 131, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slideshow .slide {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 137, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slideshow .slide .slide-partial {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+}
+
+/* line 147, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slideshow .slide .slide-partial img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 1s ease-in-out;
+}
+
+/* line 156, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slideshow .slide .slide-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+/* line 162, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slideshow .slide .slide-left img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-position: 100% 50%;
+  transform: translateX(50%);
+  width: 100%;
+}
+
+/* line 171, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slideshow .slide .slide-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition-delay: 0.2s;
+}
+
+/* line 178, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slideshow .slide .slide-right img {
+  object-position: 0% 50%;
+  transition-delay: 0.2s;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+/* line 186, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slideshow .slide.active .slide-partial, #slideshow .slide.active .slide-partial img {
+  transform: translateX(0);
+}
+
+/* line 192, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slide-select {
+  position: absolute;
+  bottom: 200px;
+  left: 20px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* line 204, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slide-select .inner-select {
+  display: flex;
+  margin-top: -20px;
+}
+
+/* line 208, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slide-select .selector {
+  height: 14px;
+  width: 14px;
+  margin-right: 7px;
+  border: 2px solid white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* line 217, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+#slide-select .selector.current {
+  background-color: white;
+}
+
+/* line 223, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+footer {
+  grid-area: foot;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #b3b3b1;
+}
+
+/* line 234, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+footer a {
+  padding: 1em;
+  text-decoration: none;
+  color: black;
+}
+
+/* line 239, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+footer a:visited {
+  color: black;
+}
+
+/* line 242, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+footer a:hover {
+  color: #ddd;
+}
+
+/* line 245, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+footer .tiktok {
+  padding-right: 3em;
+}
+
+/* line 248, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+footer .telnum, footer .email {
+  color: black;
+  font-weight: 900;
+  font-size: 0.6rem;
+  padding: 0.2em 3em 0.2em 1em;
+}
+
+/* line 254, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+footer .telnum:hover {
+  color: #ddd;
+  cursor: pointer;
+}
+
+/* line 258, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+footer .email:hover {
+  color: #ddd;
+  cursor: pointer;
+}
+
+/* line 262, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.footertext {
+  flex: 1;
+  padding: 0.2em 1em 0.2em 3em;
+}
+
+/* line 266, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+.footertext p {
+  color: black;
+  font-weight: 900;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 475px) {
+  /* line 275, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .container {
+    grid-template-areas: "head" "bod" "foot";
+    max-width: 475px;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 30em 1fr;
+  }
+  /* line 285, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* line 289, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header a {
+    font-size: 0.7em;
+    padding: 0.5em;
+  }
+  /* line 293, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header #contact {
+    padding-right: 0.5em;
+  }
+  /* line 296, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  /* line 299, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  #header a.icon {
+    display: flex;
+    /* position: absolute;
+   right:3em;
+   top:3em;*/
+  }
+  /* line 305, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header.responsive .dropdown .dropbtn {
+    display: block;
+  }
+  /* line 308, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header.responsive a {
+    display: block;
+  }
+  /* line 311, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .dropdown-content {
+    min-width: 4em;
+  }
+  /* line 314, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .dropdown-content a {
+    text-align: center;
+  }
+  /* line 317, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .dropdown .dropbtn {
+    font-size: 0.7em;
+  }
+  /* line 320, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  #logodiv {
+    padding: 0.5em;
+    /*position: absolute;
+    left:3em;*/
+  }
+  /* line 327, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  #slide-select {
+    bottom: 170px;
+  }
+  /* line 329, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  #slide-select .selector {
+    height: 9px;
+    width: 9px;
+  }
+  /* line 336, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  footer a {
+    padding: 0.5em;
+    font-size: 0.5em;
+  }
+  /* line 340, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .footertext p {
+    font-size: 0.5rem;
+  }
+  /* line 343, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .footertext {
+    padding: 0.2em 1em 0.2em 1em;
+  }
+  /* line 346, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .telnum {
+    padding-right: 0.7em;
+    padding-left: 0.5em;
+  }
+  /* line 350, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .email {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* line 354, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  footer .telnum, footer .email {
+    font-size: 0.4rem;
+    padding-left: 0.5em;
+    padding-right: 0.7em;
+  }
+  /* line 359, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  footer .tiktok {
+    padding-right: 1em;
+  }
+}
+
+@media screen and (min-width: 475px) and (max-width: 640px) {
+  /* line 366, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .container {
+    max-width: 640px;
+  }
+  /* line 369, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header a {
+    font-size: 0.68em;
+  }
+  /* line 372, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header #contact {
+    padding: 0.5em 1em;
+  }
+  /* line 375, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .dropdown .dropbtn {
+    font-size: 0.68rem;
+  }
+  /* line 378, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .dropdown-content {
+    min-width: 4em;
+  }
+  /* line 381, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .footertext p {
+    font-size: 0.5rem;
+  }
+  /* line 384, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  footer a {
+    padding: 0.5em;
+    font-size: 0.5em;
+  }
+  /* line 388, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  footer .telnum, footer .email {
+    font-size: 0.4rem;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  /* line 394, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header a {
+    font-size: 0.9em;
+  }
+  /* line 397, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .dropdown .dropbtn {
+    font-size: 0.9rem;
+  }
+  /* line 400, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .dropdown-content {
+    min-width: 4em;
+  }
+  /* line 403, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header #contact {
+    padding: 0.5em 1em;
+  }
+  /* line 406, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .footertext p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* line 412, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header #contact {
+    padding: 0.5em 1em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /* line 418, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .header a {
+    font-size: 1.5em;
+  }
+  /* line 421, ../../HTML/Norbiphotos/Scss/Acasa.scss */
+  .dropdown .dropbtn {
+    font-size: 1.5rem;
+  }
+}
+
+/*@media screen and (min-width:1536px){
+  .header a{
+    font-size:2em;
+  }
+  .dropdown .dropbtn {
+    font-size: 2rem;
+  }  
+}*/
+
+/*# sourceMappingURL=Acasa.css.map */
