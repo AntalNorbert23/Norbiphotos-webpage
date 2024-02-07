@@ -36,14 +36,14 @@
         <section class="bod">
             <h1>Completează formularul de mai jos pentru a-mi trimite un e-mail:</h1>
             <section class="form">
-                <form action="send_email.php" method="post">
+                <form>
                     <label for="lname">Numele de familie:</label>
-                    <input type="text" id="nume" name="lname" required placeholder="Introdu numele de familie"><span id="eroare_nume"></span>
+                    <input type="text" id="lname" name="lname" required placeholder="Introdu numele de familie"><span id="eroare_nume"></span>
                     <label for="fname" class="fname">Prenume:</label>
-                    <input type="text" id="prenume" name="fname" required placeholder="Introdu prenumele"><span id="eroare_prenume"></span>
+                    <input type="text" id="fname" name="fname" required placeholder="Introdu prenumele"><span id="eroare_prenume"></span>
                     <label for="email" class="email">Adresa email:</label>
                     <input type="email" id="email" name="email" required placeholder="someone@yahoo.com"/><span id="eroare_email"></span>
-                    <label for="mesaj" class="mesaj">Mesaj:</label>
+                    <label for="message"  class="mesaj">Mesaj:</label>
                     <textarea rows="5" cols="40" id="message"></textarea>
                     <input type="submit" name="Trimite" class="submit" id="submit" value="Trimite"/>
                 </form>
@@ -58,7 +58,6 @@
           <a href="https://www.tiktok.com/@norbiphotos" target="_blank" class="fab fa-tiktok tiktok"></a>
         </footer>
       </div>
-    <script src="norbiphotos.js"></script>
     <script src="Javascript/contact.js"></script>
   </body>
 </html>

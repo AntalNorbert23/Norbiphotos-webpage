@@ -280,7 +280,7 @@ form{
     font-size:0.7rem;
   }
  form input{
-    max-width: 17em;
+    max-width: 100%;
     padding-left:0.5em;
     font-size:0.7rem;
  }
@@ -288,7 +288,7 @@ form{
     padding-top:0.5em;
 }
 textarea{
-    max-width:17em;
+    max-width:20em;
     max-height:10em;
 }
 span{
