@@ -1,49 +1,40 @@
-function myFunction() {
-    let x = document.getElementById("header");
-    if (x.className === "header") {
-      x.className += " responsive";
-    } else {
-      x.className = "header";
-    }
-  }
+const header = document.getElementById("header");
+const modal = document.getElementById("Modal");
+const slides = document.getElementsByClassName("slides");
+const modalContent = document.getElementById("modal-content");
+
+let slideIndex = 1;
+
+function toggleMenu() {
+  header.classList.toggle("responsive");
+}
+
+function openModal() {
+  modal.style.display = "block";
+}
+function closeModal() {
+  modal.style.display = "none";
+}
 
 
-
-  function openModal() {
-    document.getElementById("Modal").style.display = "block";
-  }
-  let modalk= document.getElementById("Modal");
   
-  function closeModal() {
-    modalk.style.display = "none";
-  }
-
-  
- let slideIndex = 1;
- 
   function showSlides(n) {
-    let slides = document.getElementsByClassName("slides");
-    let modal= document.getElementById("modal-content");
+ 
     if (n > slides.length) {slideIndex = 1};
     if (n < 1) {slideIndex = slides.length};
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slides[slideIndex-1].style.display = "grid";
-        if(slideIndex==5 || slideIndex==6 || slideIndex==7 || slideIndex==8||
-          slideIndex==13 || slideIndex==14 ||slideIndex==15 || slideIndex==16||
-          slideIndex==17 || slideIndex==18 ||slideIndex==19 ||slideIndex==20||
-          slideIndex==29 ||slideIndex==30 ||slideIndex==31 ||slideIndex==32 ||
-          slideIndex==37 ||slideIndex==38 ||slideIndex==39 ||slideIndex==40){
-          
-          $(modal).addClass('vertical');
-          $(modal).removeClass('horizontal');
-      }else {
-        $(modal).removeClass('vertical');
-        $(modal).addClass('horizontal');
-      }
+    if ([5, 6, 7, 8, 13, 14, 15, 16, 17, 18, 19, 20, 29, 30, 31, 32, 37, 38, 39, 40].includes(slideIndex)) {
+      modalContent.classList.add("vertical");
+      modalContent.classList.remove("horizontal");
+    } else {
+      modalContent.classList.remove("vertical");
+      modalContent.classList.add("horizontal");
     }
-
+  }
+    
     showSlides(slideIndex);
   
     function plusSlides(n) {
@@ -57,7 +48,7 @@ function myFunction() {
   document.addEventListener("keydown",function(event){
     let name=event.key;
     if(name==="Escape"){
-    modalk.style.display="none";
+    modal.style.display="none";
   }
     else if(name==="ArrowLeft"){
        plusSlides(-1);

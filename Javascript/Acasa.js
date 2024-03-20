@@ -63,24 +63,6 @@ let cycle = index => {
 	} else {
 		nextIndex=0;
 	}
-	//REVERSE SLIDESHOW
-	/*nextIndex=9;
-			if (index !== undefined) {
-				currentIndex=nextIndex;
-			} else {
-				if (currentIndex == 0) {
-					currentIndex=nextIndex ;
-				} else {
-					currentIndex=currentIndex-1;
-				}
-			}
-			
-			if (nextIndex!==0) {
-				nextIndex=currentIndex - 1;
-			} else {
-				nextIndex=9;
-			}*/
-	
 };
 
 $(() => {
@@ -104,46 +86,6 @@ $(() => {
 		}
 	});
 
-	/*$(window).on("keydown", event=>{
-		let name=event.key;
-		console.log(name);
-		if(name=="ArrowRight"){
-			$currentSlide = $($slides.get(currentIndex));
-			$currentSelector = $($selectors.get(currentIndex));
-		
-			$nextSlide = $($slides.get(nextIndex));
-			$nextSelector = $($selectors.get(nextIndex));
-		
-			$currentSlide.removeClass("active");
-			$nextSlide.addClass("active");
-		
-			$currentSelector.removeClass("current");
-			$nextSelector.addClass("current");
-			
-			window.clearInterval(interval);
-			cycle();
-			interval = window.setInterval(cycle, 6000);
-		}
-		
-		else if(name=="ArrowLeft"){
-			
-			$currentSlide = $($slides.get(currentIndex));
-			$currentSelector = $($selectors.get(currentIndex));
-		
-			$nextSlide = $($slides.get(nextIndex));
-			$nextSelector = $($selectors.get(nextIndex));
-		
-			$currentSlide.addClass("active");
-			$nextSlide.removeClass("active");
-		
-			$currentSelector.addClass("current");
-			$nextSelector.removeClass("current");
-			
-			window.clearInterval(interval);
-			cycle();
-			interval = window.setInterval(cycle, 6000);
-		}
-	})*/
 });
 
 

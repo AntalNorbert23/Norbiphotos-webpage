@@ -1,46 +1,39 @@
-function myFunction() {
-    let x = document.getElementById("header");
-    if (x.className === "header") {
-      x.className += " responsive";
-    } else {
-      x.className = "header";
-    }
-  }
+const header = document.getElementById("header");
+const modal = document.getElementById("Modal");
+const slides = document.getElementsByClassName("slides");
+const modalContent = document.getElementById("modal-content");
+
+let slideIndex = 1;
+
+function toggleMenu() {
+  header.classList.toggle("responsive");
+}
+
+function openModal() {
+  modal.style.display = "block";
+}
+function closeModal() {
+  modal.style.display = "none";
+}
 
 
-
-  function openModal() {
-    document.getElementById("Modal").style.display = "block";
-  }
-  let modalk= document.getElementById("Modal");
-  
-  function closeModal() {
-    modalk.style.display = "none";
-  }
-
-  
- let slideIndex = 1;
   
   function showSlides(n) {
-    let slides = document.getElementsByClassName("slides");
-    let modal= document.getElementById("modal-content");
+ 
     if (n > slides.length) {slideIndex = 1};
     if (n < 1) {slideIndex = slides.length};
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slides[slideIndex-1].style.display = "grid";
-        if(slideIndex==1 || slideIndex==2 || slideIndex==3 || slideIndex==4||
-            slideIndex==9 || slideIndex==10 ||slideIndex==11 || slideIndex==12||
-            slideIndex==17 || slideIndex==18 ||slideIndex==19 || slideIndex==20){
-    
-          $(modal).addClass('vertical');
-          $(modal).removeClass('horizontal');
-      }else {
-        $(modal).removeClass('vertical');
-        $(modal).addClass('horizontal');
-      }
+    if ([1, 2, 3, 4, 9, 10, 11, 12, 17, 18, 19, 20].includes(slideIndex)) {
+      modalContent.classList.add("vertical");
+      modalContent.classList.remove("horizontal");
+    } else {
+      modalContent.classList.remove("vertical");
+      modalContent.classList.add("horizontal");
     }
+  }
     
     showSlides(slideIndex);
   
@@ -55,7 +48,7 @@ function myFunction() {
   document.addEventListener("keydown",function(event){
     let name=event.key;
     if(name==="Escape"){
-    modalk.style.display="none";
+    modal.style.display="none";
   }
     else if(name==="ArrowLeft"){
        plusSlides(-1);
